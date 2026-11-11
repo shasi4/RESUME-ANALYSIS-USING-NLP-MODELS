@@ -1,0 +1,64 @@
+\pagestyle{fancy}
+
+\pagenumbering{roman}
+\newgeometry{left=1.5in,right=1in,top=1in,bottom=1in}
+
+\makeatletter
+\patchcmd{\@chapter}{\addtocontents{lof}{\protect\addvspace{10\p@}}}{}{}{}% LoF
+\patchcmd{\@chapter}{\addtocontents{lot}{\protect\addvspace{10\p@}}}{}{}{}% LoT
+\makeatother
+
+\lhead{\scriptsize BTech (Electronics And Communication Engineering)}
+\chead{}
+\rhead{\scriptsize \bfseries Thesis}
+
+\lfoot{\scriptsize Department of ECE, R.V.R. \& J.C.College of Engineering (Autonomous) }  
+
+%\rfoot{\scriptsize }
+\rfoot{\scriptsize Page \thepage }
+
+\cfoot{}
+
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\footrulewidth}{0.8pt}
+
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{30pt}
+
+\setlength{\cftbeforelottitleskip}{0pt}
+\setlength{\cftbeforeloftitleskip}{0pt}
+%\setlength{\cftaftertoctitleskip}{0pt}
+
+\doublespacing
+\newpage
+\input{chapters/abstract}
+\newpage
+\input{chapters/acknowledgements}
+
+
+\addcontentsline{toc}{section}{Abstract}
+
+\newpage
+%\singlespacing
+
+\onehalfspacing
+
+\renewcommand{\contentsname}{\centerline{Table of contents}}
+
+\tableofcontents\thispagestyle{fancy}
+\addcontentsline{toc}{section}{Table of Contents}
+
+%\newpage
+%\listoftables\thispagestyle{fancy}
+%\addcontentsline{toc}{section}{List of Tables}
+
+\newpage
+
+\listoffigures\thispagestyle{fancy}
+\addcontentsline{toc}{section}{List of Figures} 
+
+%\tableofcontents\thispagestyle{fancy}
+
+
+
+

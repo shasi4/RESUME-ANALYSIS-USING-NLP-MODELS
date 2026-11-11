@@ -1,0 +1,15 @@
+\chapter{PUBLICATIONS}
+  
+  \patchcmd{\chapter}{\thispagestyle{fancy}}{}{}
+  \hrulefill\\
+  \thispagestyle{empty}
+
+  \newpage
+  \renewcommand{\thesection}{\thechapter.\arabic{section}}
+
+
+% Insert all pages of the PDF
+\includepdf[pages=-, fitpaper]{publication.pdf}
+
+  \newpage
+  \includepdf[page={-},scale=.85]{images/publication.pdf}

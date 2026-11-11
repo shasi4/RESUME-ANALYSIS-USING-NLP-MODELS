@@ -1,0 +1,101 @@
+% Packages
+\usepackage{lipsum}
+\usepackage{amsmath}        % Advanced math typesetting
+\usepackage[utf8]{inputenc} % Unicode support (Umlauts etc.)
+\usepackage{hyperref}       % Add a link to your document
+\usepackage{graphicx}       % Add pictures to your document
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage[english]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{blindtext}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{listings}
+\usepackage{caption}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+\usepackage{acronym}
+\usepackage{amsthm}
+
+\VerbatimFootnotes % Required, otherwise verbatim does not work in footnotes!
+\usepackage{times}
+\usepackage{array}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+
+\usepackage{multirow}
+\usepackage[autostyle]{csquotes}
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	
+\lstset{
+%language=bash,                         % Code langugage
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+%numbers=left,                          % Line nums position
+%numberstyle=\tiny,                     % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray}, % Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+%captionpos=t,                          % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+morekeywords={__global__, __device__},  % CUDA specific keywords
+}
+
+\titleformat{\section}
+{\normalfont\large\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}[runin]
+  {\normalfont\normalsize\mdseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}[runin]
+  {\normalfont\normalsize\mdseries}{\thesubsubsection}{1em}{}
+
+\usepackage{enumitem}
+\usepackage{scrextend}
+\usepackage{afterpage}
+\usepackage{setspace}
+\usepackage{hyphenat}
+
+%\usepackage[T1]{fontenc}
+%\usepackage[tocflat]{tocstyle}
+%\usetocstyle{standard}
+%\usepackage{blindtext}
+\usepackage{tocloft}
+\usepackage{authoraftertitle}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{graphicx}
+
+%\titleformat{\chapter}[display]
+ % {\normalfont\Large\bfseries}{\filleft\chaptertitlename\ \thechapter}
+%  {20pt}{\Large\filcenter}
+
+ \titlespacing*{\chapter}{0cm}{3cm}{0.5cm}
+    \titleformat{\chapter}[display]{\normalfont\large\bfseries\filleft}{\scalebox{5}{\color{gray}\Huge\thechapter}}{2cm}{\Huge}
+    
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{pdfborder = {0 0 0} }
